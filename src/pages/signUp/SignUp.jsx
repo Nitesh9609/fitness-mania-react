@@ -18,28 +18,17 @@ const SignUp = () => {
     }
 
     const handleOnClick= async ()  =>{
-        axios.post('http://localhost:8080/app/user/register',user)
+        axios.post('https://fitness-mania-backend.vercel.app/app/user/register',user)
         .then( (response) => {
             console.log(response.data);
-            if(response.data){
-                return alert('User Created Successfully')
-            }
-            else{
-                return alert('some error')
-            }
+            // if(response.data){
+            //     return alert('User Created Successfully')
+            // }
         }
-        
         )
         .catch(function (error) {
             console.log(error);
         });
-
-
-        // const result = await axios.post('http://localhost:8080/app/user/register',user)
-        // if(result){
-        //     alert("SignUp Sucessfull")
-        // }
-        // localStorage.setItem("user", JSON.stringify(result.data))
     
 
     }

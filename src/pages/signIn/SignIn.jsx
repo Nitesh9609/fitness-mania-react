@@ -21,7 +21,7 @@ const SignIn = ({sendUser,getUsers}) => {
 
   const handleOnClick = async () => {
     await axios
-      .post("http://localhost:8080/app/user/signin", user)
+      .post("https://fitness-mania-backend.vercel.app/app/user/signin", user)
       .then((res) => {
         sendUser(res.data);
         if(res.data){
